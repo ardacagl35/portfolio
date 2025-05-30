@@ -340,33 +340,70 @@
             </div>
         </section>
     
-        <!-- Blog Section -->
+        <!-- Latest Articles Section -->
         <section class="section bg-gradient-to-br from-blue-50 to-purple-50 px-4 sm:px-6 lg:px-8">
             <div class="container mx-auto">
                 <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 gradient-text" data-aos="fade-up">Latest Articles</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                    @foreach($posts as $post)
+                    <!-- Blog Post 1 -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover" data-aos="fade-up">
                         <div class="relative overflow-hidden group">
-                            <img src="{{ $post->image }}" alt="{{ $post->title }}" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                            <img src="https://picsum.photos/800/400?random=1" alt="Blog Post 1" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
                                 <div class="text-white">
-                                    <h3 class="text-lg sm:text-xl font-semibold mb-2">{{ $post->title }}</h3>
-                                    <p class="text-sm">{{ Str::limit($post->excerpt, 100) }}</p>
+                                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Modern Web Development with Laravel and React</h3>
+                                    <p class="text-sm">Learn how to build modern web applications using Laravel and React...</p>
                                 </div>
                             </div>
                         </div>
                         <div class="p-4 sm:p-6">
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-gray-500">{{ $post->created_at->format('M d, Y') }}</span>
-                                <a href="{{ route('blog.show', $post->slug) }}" class="text-blue-500 hover:text-blue-600">Read More →</a>
+                                <span class="text-sm text-gray-500">March 15, 2025</span>
+                                <a href="#" class="text-blue-500 hover:text-blue-600">Read More →</a>
                             </div>
                         </div>
                     </div>
-                    @endforeach
+
+                    <!-- Blog Post 2 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden group">
+                            <img src="https://picsum.photos/800/400?random=2" alt="Blog Post 2" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
+                                <div class="text-white">
+                                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Laravel Best Practices for 2025</h3>
+                                    <p class="text-sm">Discover the latest best practices for Laravel development...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">March 10, 2025</span>
+                                <a href="#" class="text-blue-500 hover:text-blue-600">Read More →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative overflow-hidden group">
+                            <img src="https://picsum.photos/800/400?random=3" alt="Blog Post 3" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
+                                <div class="text-white">
+                                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Building Responsive Web Applications</h3>
+                                    <p class="text-sm">A comprehensive guide to creating responsive web applications...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">March 5, 2025</span>
+                                <a href="#" class="text-blue-500 hover:text-blue-600">Read More →</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="text-center mt-8">
-                    <a href="{{ route('blog.index') }}" class="inline-block gradient-bg text-white px-6 sm:px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">View All Posts</a>
+                    <a href="#" class="inline-block gradient-bg text-white px-6 sm:px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">View All Posts</a>
                 </div>
             </div>
         </section>
@@ -608,7 +645,7 @@
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <img src="https://picsum.photos/800/400?random=2" alt="Blog Post 2" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Laravel Best Practices for 2024</h3>
+                            <h3 class="text-xl font-bold mb-2">Laravel Best Practices for 2025</h3>
                             <p class="text-gray-600 mb-4">Discover the latest best practices for Laravel development...</p>
                             <a href="#" class="text-blue-500 hover:text-blue-600">Read More →</a>
                         </div>
@@ -655,7 +692,7 @@
     <footer class="bg-gray-50 py-8">
         <div class="container mx-auto px-4">
             <div class="text-center text-gray-600">
-                <p>&copy; Uğur Arda Çağlı 2024 All rights reserved.</p>
+                <p>&copy; Uğur Arda Çağlı 2025 All rights reserved.</p>
             </div>
         </div>
     </footer>
